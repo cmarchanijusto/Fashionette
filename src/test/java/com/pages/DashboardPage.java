@@ -6,6 +6,8 @@ public class DashboardPage extends BasePage {
 
     //example 2
 
+    //example 3
+
 
 
 
