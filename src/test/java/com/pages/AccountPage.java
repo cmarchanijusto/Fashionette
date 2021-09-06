@@ -35,10 +35,7 @@ public class AccountPage extends BasePage {
     @FindBy(xpath = "//div[text()='Cancel']")
     public WebElement cancelButton;
 
-
-
-    //this one is not correct can you ask your cousin again:)
-    @FindBy(xpath = "/html/body/div[1]/div[3]/div/div[1]/div[2]/div/ul/li[2]/div/div/div[1]/div/div[2]/text()[1]")
+    @FindBy(xpath = "(//div[@class='account__content__column account__content__column--customer'])[1]")
     public WebElement fullName;
 
 

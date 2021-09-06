@@ -70,16 +70,9 @@ public class VoucherStepDefs {
 
     public void user_should_see_discount_on_total_price() {
 
-
-        //please review this
-
-
         actualDiscount=voucherPage.discount.getAttribute("value");
         System.out.println("actualTotal = " + actualDiscount);
-
-
         Assert.assertEquals(expectedDiscount,actualDiscount);
-
 
 
     }

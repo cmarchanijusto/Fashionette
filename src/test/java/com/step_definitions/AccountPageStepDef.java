@@ -54,8 +54,11 @@ public class AccountPageStepDef  {
     public void user_should_see_personal_data_saved() {
 
         String expectedFullName="Mrs Newlife Welcome";
-        String actualFullName=(accountPage.fullName).getText();
-        System.out.println("actualFullName = " + actualFullName);
+        String[] details = (accountPage.fullName).getText().split("\n");
+        String actualFullName= details[1].trim() + details[2].trim();
+
+        //String actualFullName=(accountPage.fullName).getText();
+        System.out.println("actualFullName = "  + actualFullName);
         System.out.println("expectedFullName = " + expectedFullName);
 
 
