@@ -70,12 +70,12 @@ Cucumber - JUnit
   
   Under .com package we create Cucumber structure packages as follows:
   
-  - Create Pages package: 
-  - Create Runners package: Inside we create CukesRunner class and FailedTestRunner. Inside CukesRunner is where we run all of the tests with JUnit. This class includes               @CucumberOptions which includes plugin, tags, features, glue, etc. Inside FailedTestRunner 
-  - Create Step Definitions package:is where we write the codes and implement automation for the scenarios in the feature files. Inside this package, also create Hooks class which     are blocks of code that run before and after each scenario (test case) and implement screenshots for the failing tests.
-  - Create Utilities package: is where we create Driver, Configuration Reader and BrowserUtils.
+  - Pages package: 
+  - Runners package: Inside we create CukesRunner class and FailedTestRunner. Inside CukesRunner is where we run all of the tests with JUnit. This class includes                       @CucumberOptions which includes plugin, tags, features, glue, etc. Inside FailedTestRunner 
+  - Step Definitions package:is where we write the codes and implement automation for the scenarios in the feature files. Inside this package, also create Hooks class which           are blocks of code that run before and after each scenario (test case) and implement screenshots for the failing tests.
+  - Utilities package: is where we create Driver, Configuration Reader and BrowserUtils.
  
-  - Create configuration properties: is where we include url, browser, username and password.
+  - Configuration properties: is where we include url, browser, username and password.
 
 ## Running Steps
 
