@@ -84,8 +84,8 @@ Cucumber - JUnit
   
   Under .com package we create Cucumber structure packages as follows:
   
-  - Pages package: It has been used Page Object Model as a design pattern for creating an Object Repository for web UI elements. Each web page in the application is required to       have it’s own corresponding page class. The page class is thus responsible for finding the WebElements in that page and then perform operations with these WebElements.
-  - Runners package: Inside we create CukesRunner class and FailedTestRunner. Inside CukesRunner is where we run all of the tests with JUnit. This class includes                       @CucumberOptions which includes plugin, tags, features, glue, etc. The purpose of FailedTestRunner is rerun the failed tests only.
+  - ## Pages package: It has been used Page Object Model as a design pattern for creating an Object Repository for web UI elements. Each web page in the application is required to       have it’s own corresponding page class. The page class is thus responsible for finding the WebElements in that page and then perform operations with these WebElements.
+  - ## Runners package: Inside we create CukesRunner class and FailedTestRunner. Inside CukesRunner is where we run all of the tests with JUnit. This class includes                       @CucumberOptions which includes plugin, tags, features, glue, etc. The purpose of FailedTestRunner is rerun the failed tests only.
   - Step Definitions package:is where we write the codes and implement automation for the scenarios in the feature files. Inside this package, also create Hooks class which           are blocks of code that run before and after each scenario (test case) and implement screenshots for the failing tests.
   - Utilities package: is where we create Driver, Configuration Reader and BrowserUtils.
  
