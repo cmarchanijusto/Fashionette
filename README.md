@@ -2,13 +2,13 @@
 
 ** Version 1.0.0**
 
-## Framework
+## Build tool
 
 Maven project
 
 ## Automation tools
 
-Cucumber - JUnit
+Cucumber - JUnit 
 
 ## Installation - Setting Up Selenium - cucumber - Java
 
