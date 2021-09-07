@@ -78,16 +78,16 @@ Cucumber - JUnit
   -  Refresh Maven
   -  Set up VCS of the project to Github
   
-## Framework Design
+## Cucumber Framework Structure
   
   Under test/java folder create .com package and create Resources Directory : this is where feature files are located. Inside feature files write scenarios using Gherkin language.
   
-  Under .com package we create Cucumber structure packages as follows:
+  Under .com package we create the following structure packages:
   
   - Pages package: It has been used Page Object Model as a design pattern for creating an Object Repository for web UI elements. Each web page in the application is required to       have it’s own corresponding page class. The page class is thus responsible for finding the WebElements in that page and then perform operations with these WebElements.
-  - Runners package: Inside we create CukesRunner class and FailedTestRunner. Inside CukesRunner is where we run all of the tests with JUnit. This class includes                       @CucumberOptions which includes plugin, tags, features, glue, etc. The purpose of FailedTestRunner is rerun the failed tests only.
-  - Step Definitions package:is where we write the codes and implement automation for the scenarios in the feature files. Inside this package, also create Hooks class which           are blocks of code that run before and after each scenario (test case) and implement screenshots for the failing tests.
-  - Utilities package: create Driver, Configuration Reader and BrowserUtils classes.
+  - Runners package: Inside this package create CukesRunner class and FailedTestRunner. CukesRunner class is where we run all of the tests with JUnit. This class includes             @CucumberOptions which includes plugin, tags, features, glue, etc. The purpose of FailedTestRunner is rerun the failed tests only.
+  - Step Definitions package: write the codes and implement automation for the scenarios in the feature files. Inside this package, also create Hooks class which are blocks of         code that run before and after each scenario (test case) and implement screenshots for the failing tests.
+  - Utilities package: create Driver, Configuration Reader and BrowserUtils classes. It has reusable utilities which can be used across different classes of the framework.
  
   - Configuration properties: is where we include url, browser, username and password.
 
