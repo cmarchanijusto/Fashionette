@@ -10,7 +10,7 @@ Maven project
 
 Cucumber - JUnit 
 
-## Installation - Setting Up Selenium - cucumber - Java
+## Installation 
 
 - Install Java and seth path
 - Install Maven and seth path
