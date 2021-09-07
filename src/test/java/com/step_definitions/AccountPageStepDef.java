@@ -3,10 +3,17 @@ package com.step_definitions;
 import com.pages.AccountPage;
 import com.pages.ShoppingPage;
 import com.utilities.BrowserUtils;
+import com.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+
+import java.time.Duration;
 
 public class AccountPageStepDef  {
 
@@ -43,8 +50,15 @@ public class AccountPageStepDef  {
     }
 
     @When("user clicks save button")
-    public void user_clicks_save_button() {
+    public void user_clicks_save_button() throws InterruptedException {
         accountPage.saveButton.click();
+
+        FluentWait <WebDriver> wait = new FluentWait<WebDriver>(Driver.get())
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofSeconds(1))
+                .ignoring(NoSuchElementException.class);
+
+        wait.until(ExpectedConditions.visibilityOf(accountPage.editButton));
 
 
 
@@ -53,14 +67,9 @@ public class AccountPageStepDef  {
     @Then("user should see personal data saved")
     public void user_should_see_personal_data_saved() {
 
-        String expectedFullName="Mrs Newlife Welcome";
+        String expectedFullName="Mr NewLife Welcome";
         String[] details = (accountPage.fullName).getText().split("\n");
-        String actualFullName= details[1].trim() + details[2].trim();
-
-        //String actualFullName=(accountPage.fullName).getText();
-        System.out.println("actualFullName = "  + actualFullName);
-        System.out.println("expectedFullName = " + expectedFullName);
-
+        String actualFullName= details[0].trim();
 
         Assert.assertEquals(expectedFullName,actualFullName);
 

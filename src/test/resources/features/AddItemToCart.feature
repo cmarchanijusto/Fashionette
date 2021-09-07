@@ -1,7 +1,6 @@
 
-Feature: Adding an item to Cart
+Feature: As a user I want to be able to adding an item to Cart
 
-  @AddItemToCart
   @first
   Scenario: The user should be able to add new product to the cart and login
 
@@ -36,7 +35,7 @@ Feature: Adding an item to Cart
      And    user add item to the Cart
      And    user goes to the Cart
      And user clicks voucher button
-     And user enters "coupon"
+     And user enters "qachallenge"
      When user clicks redeem button
      Then user should see discount on total price
 
