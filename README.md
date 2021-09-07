@@ -6,6 +6,10 @@
 
 Maven project
 
+## Programming language
+
+Java
+
 ## Automation tools
 
 Cucumber - JUnit 
