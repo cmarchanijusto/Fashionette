@@ -42,17 +42,21 @@ Cucumber - JUnit
   -  Add dependencies to POM.xml :
   
        - Selenium dependency
+       
                        <dependency>
                           <groupId>org.seleniumhq.selenium</groupId>
                           <artifactId>selenium-java</artifactId>
                           <version>3.141.59</version>
-                      </dependency>        
+                      </dependency>   
+                      
        - Github dependency
+       
                         <dependency>
                             <groupId>io.github.bonigarcia</groupId>
                             <artifactId>webdrivermanager</artifactId>
                             <version>3.8.0</version>
                         </dependency>
+                        
        - Cucumber Java dependency
        
                 <dependency>
