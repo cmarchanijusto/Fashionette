@@ -12,8 +12,8 @@ Cucumber - JUnit
 
 ## Installation 
 
-- Install Java and seth path
-- Install Maven and seth path
+- Install Java and set path
+- Install Maven and set path
 - Install Cucumber plugins:
   - Open IntelliJ IDEA
   - Go to preferences and click Plugins
